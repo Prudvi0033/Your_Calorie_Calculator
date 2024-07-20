@@ -1,0 +1,320 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat Medium";
+}
+@font-face {
+    font-family: monte;
+    src: url(Montserrat-Italic-VariableFont_wght.ttf);
+}
+html,
+body {
+    font-family: monte;
+    background-image: url(backgr.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+#head nav {
+    display: flex;
+    width: 100%;
+    height: 5vw;
+    user-select: none;
+    color: white;
+    text-transform: capitalize;
+    background-color: #40c189f0;
+}
+
+#head nav h1 h3 {
+    display: flex;
+    flex-flow: wrap;
+    padding: 20px;
+    margin-bottom: 20px;
+    line-height: 1.2px;
+}
+
+#head nav h3 {
+    display: flex;
+    justify-content: center;
+    margin-left: 40%;
+    font-size: 2.3rem;
+    padding-bottom: 8px;
+    cursor: pointer;
+}
+
+
+#head nav h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -11%;
+    margin-top: 30px;
+    font-size: 3.5rem;
+    cursor: pointer;
+}
+
+#head nav img {
+    height: 3.8vw;
+    margin-top: 15px;
+    margin-left: 2vw;
+    background-color: #40C18A;
+}
+
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    color: white;
+    width: 100%;
+    height: 50vw;
+    background-color: rgba(0, 0, 0, 0.753);
+}
+
+#home h1 {
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 4vw;
+    width: 60vw;
+}
+
+#home p {
+    padding: 50px;
+    font-size: 1.5vw;
+    text-align: center;
+    text-transform: capitalize;
+    width: 50vw;
+}
+#but{
+    display: flex;
+    margin-top: 55vh;
+    position: absolute;
+    gap: 2rem;
+}
+#home button {
+    width: 10vw;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: salmon;
+    backdrop-filter: blur(12px);
+    font-size: 0.8vw;
+    color: white;
+    border-radius: 100px;
+    text-transform: capitalize;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#home button:hover {
+    transform: rotateY(-15deg);
+    background-color: #40C18A;
+    color: white;
+    transition: 0.8s;
+}
+#but button {
+    width: 10vw;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: salmon;
+    backdrop-filter: blur(12px);
+    font-size: 0.8vw;
+    color: white;
+    border-radius: 100px;
+    text-transform: capitalize;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#but button:hover {
+    transform: rotateY(-15deg);
+    background-color: #40C18A;
+    color: white;
+    transition: 0.8s;
+}
+#main {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 8vh;
+    align-items: center;
+    /*background-color: rgba(0, 0, 0, 0.753);*/
+    font-size: 4vh;
+    width: 100%;
+    height: 100vh;
+}
+
+/* inner box*/
+#box {
+    width: 50%;
+    height: 70%;
+    padding: 30px;
+    font-family: "Montserrat ExtraBold";
+    background-color: transparent;
+    border: 3px solid white;
+    backdrop-filter: blur(26px);
+    transition: blur(15px);
+    border-radius: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: 0.9s all;
+    font-weight: 900;
+    transform: scale(0);
+    pointer-events: all;
+    /*visibility: hidden;*/
+    /* display: none; */
+}
+#things i{
+    position: absolute;
+    transform: translateX(-16vw);
+    color: white;
+    cursor: pointer;
+    transition: 0.6s;
+}
+#things i:hover{
+    color: salmon;
+    scale: 12px;
+}
+#things {
+    width: 320px;
+    position: absolute;
+    color: black;
+    top: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.ip {
+    margin-bottom: 10px;
+    border-bottom: 3px solid white;
+    position: relative;
+}
+
+.ip input {
+    font-size: 20px;
+    font-weight: 600;
+    width: 100%;
+    padding: 10px 5px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    /*enable this for box*/
+    color: white;
+}
+
+.ip label {
+    position: absolute;
+    left: 24px;
+    top: 15%;
+    transform: translateX(-40%);
+    font-size: 20px;
+    color: white;
+    font-weight: 900;
+}
+
+.ip ::placeholder {
+    color: #7a7c82;
+}
+
+#gender {
+    left: 60px;
+    top: 30%;
+    transform: translateX(0%);
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    margin-top: 15%;
+}
+
+.gen {
+    color: white;
+    position: absolute;
+    font-size: 24px;
+    font-weight: 900;
+    top: -10%;
+}
+
+
+.g,
+.gg {
+    color: white;
+    width: 16px;
+    height: 16px;
+    margin-right: 20px;
+    font-weight: 900;
+}
+
+.g,
+.gg:hover {
+    cursor: pointer;
+}
+
+#act {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    font-size: 20px;
+    color: white;
+    font-weight: 600;
+    gap: 0.8rem;
+}
+
+.label {
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+#a {
+    font-size: 16px;
+    position: absolute;
+    top: 96%;
+    background-color: #4B5267;
+    color: white;
+    font-weight: 500;
+    border: none;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    height: 2rem;
+    width: 100%;
+    transition: 0.9s;
+}
+
+#a:hover,
+:focus {
+    color: white;
+    background-color: lightslategray;
+}
+
+#bb {
+    position: absolute;
+    left: 20vw;
+    top: 58vh;
+    text-align: center;
+    width: 10vw;
+    padding: 15px;
+    background-color: salmon;
+    font-size: 0.8vw;
+    color: white;
+    border-radius: 100px;
+    text-transform: capitalize;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+}
+
+#bb:hover {
+    transform: rotateY(-15deg);
+    background-color: #40C18A;
+    color: white;
+    transition: 0.9s;
+}
+.adut{
+    pointer-events: all;
+    /* display: inherit; */
+}

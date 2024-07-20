@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="head">
+    <nav>
+      <img src="lllogo.png" alt="Your Calorie Calculator">
+      <h3>Your</h3>
+      <h1>Calorie Calculator</h1>
+    </nav>
+  </div>
+  <div id="home">
+    <h1>Helping people calculate their daily calories</h1>
+    <p>To calculate calories and see different foods and their macros click the buttons below</p>
+  </div>
+  <div id="main">
+    <div id="box">
+      <div id="things">
+        <i id="cpop" class="ri-arrow-left-s-line"></i>
+        <div>
+          <form action="">
+            <div class="ip">
+              <label class="l">Age</label><br>
+              <input type="number" placeholder="in yrs" min="1" max="100">
+            </div>
+            <div class="ip">
+              <label class="l">Height</label><br>
+              <input type="number" placeholder="in cm" min="1">
+            </div>
+            <div class="ip">
+              <label class="l">Weight</label><br>
+              <input type="number" placeholder="in kgs" min="1">
+            </div>
+          </div>
+          <div id="gender">
+            <label for="" class="gen">Gender</label><br>
+            <label for="" class="g">Male</label>
+            <input type="radio" name="gender" class="gg">
+            <label for="" class="g">Female</label>
+            <input type="radio" name="gender" class="gg">
+          </div>
+        </form>
+      </div>
+      <form action="">
+        <div><button id="bb" onclick="calculateCalories()">Calculate</button></div>
+      </form>
+    </div>
+    <div id="but">
+      <a href="chart.html"><button>Food chart</button></a>
+      <button id="opop">Calories</button>
+    </div>
+  </div>
+  <script src="main.js"></script>
+  <script>
+    function calculateCalories() {
+      // Get the user's input
+      const age = document.querySelector('input[placeholder="in yrs"]').value;
+      const height = document.querySelector('input[placeholder="in cm"]').value;
+      const weight = document.querySelector('input[placeholder="in kgs"]').value;
+      const gender = document.querySelector('input[name="gender"]:checked').value;
+
+      // Check if any input fields are empty
+      if (!age || !height || !weight || !gender) {
+        alert(`Please fill in all required fields.`);
+        return;
+      }
+
+      // Calculate the user's BMR
+      const bmr = (gender === 'male') ?
+        10 * weight + 6.25 * height - 5 * age + 5 :
+        10 * weight + 6.25 * height - 5 * age - 161;
+
+      // Calculate the user's daily calorie needs
+      const calories = bmr * 1.2;
+
+      // Display the user's daily calorie needs
+      document.querySelector('#bb').innerHTML = `Your daily calorie needs are: ${calories.toFixed(2)}`;
+
+      // Prevent the window from closing
+      window.addEventListener('beforeunload', function (event) {
+        event.preventDefault();
+        event.returnValue = '';
+      });
+    }
+  </script>
+</body>
+
+</html>
